@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{0A390039-8D76-419D-87A9-A6F89D1CE3E1}"
 	ProjectSection(SolutionItems) = preProject
 		include\global.h = include\global.h
+		include\kernelInterface.h = include\kernelInterface.h
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LIB", "LIB", "{3AF65E58-9ADF-47A9-A7A4-EDFE2EE40AAF}"
