@@ -152,5 +152,47 @@ typedef struct SStatus
     int (*getStatusValue)(void* thiz);
 };
 
+/*-----------------------------------------------------------------------------------------
+**                                     Class Definition
+**-----------------------------------------------------------------------------------------
+*/
+/* <类描述> */
+/* 1)程序运行环境接口 */
+/* 2) */
+typedef struct SContext
+{
+    /* 状态管理 */
+    /* 获取状态 */
+    Status* (*getStatus)(void* thiz, const char* statusName, int initValue);
+
+    /* 内存块管理 */
+    /* 获取内存块指针 */
+    unsigned char* (*getShm)(void* thiz, const char* shmName, unsigned int shmSize);
+
+    /* 命令行接口 */
+    /* 注册命令行指令 */
+    void (*registerCommand)(void* thiz, const char* cmd, CmdHandler cmdHandler, const char* comment);
+
+    /* 日志 */
+    /* 记录日志 */
+    void (*log)(void* thiz, const char* info) ;
+
+    /* 事件管理 */
+    /* 发布事件 */
+    void (*publish)(void* thiz, unsigned int eventId, const unsigned char* msg, unsigned int msgLen);
+    /* 获取事件计数 */
+    unsigned long long (*getEventCount)(void* thiz, unsigned int eventId);
+    /* 获取事件消息累计大小 */
+    unsigned long long (*getEventMsgSize)(void* thiz, unsigned int eventId);
+
+    /* 时间函数 */
+    /* 获取程序运行时间(单位为定时周期) */
+    unsigned long long (*appTime)(void* thiz);
+    /* 获取UTC时间(单位为S) */
+    long long (*utcTime)(void* thiz);
+    /* 获取时间戳 */
+    unsigned char* (*timestamp)(void* thiz);
+} Context;
+
 
 #endif /* KERNELINTERFACE_H */
