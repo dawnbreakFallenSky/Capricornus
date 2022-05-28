@@ -24,5 +24,8 @@
     <ClCompile Include="APP\main.c">
       <Filter>源文件\APP</Filter>
     </ClCompile>
+    <ClCompile Include="APP\processor.c">
+      <Filter>源文件\APP</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -32,6 +32,7 @@
 */
 #include "global.h"
 #include "../LIB/CSTLib/cList.h"
+#include "../LIB/CSTLib/cFunction.h"
 
 /*-----------------------------------------------------------------------------------------
 **                                     Macro Definition
@@ -194,5 +195,37 @@ typedef struct SContext
     unsigned char* (*timestamp)(void* thiz);
 } Context;
 
+/*-----------------------------------------------------------------------------------------
+**                                     Class Definition
+**-----------------------------------------------------------------------------------------
+*/
+/* <类描述> */
+/* 1)模块处理器基类 */
+/* 2) */
+typedef struct SProcessor
+{
+    /* 模块初始化 */
+    void (*init)(void* thiz);
+    /* 模块事件处理函数 */
+    void (*process)(void* thiz, Event* event);
+    /* 获取订阅事件ID列表 */
+    CList* (*subscribeEventIdList)(void* thiz);
+
+    /* 程序上下文 */
+    Context* _context;
+    /* 参数 */
+    const char* _param;
+    /* 订阅事件ID列表 */
+    CList _subscribeEventIdList;
+} Processor;
+
+/*-----------------------------------------------------------------------------------------
+**                                   Function Declaration
+**-----------------------------------------------------------------------------------------
+*/
+/* 构造函数 */
+extern Processor* CreateProcessor(Context* context, const char* param);
+/* 析构函数 */
+extern void DestroyProcessor(Processor* processor);
 
 #endif /* KERNELINTERFACE_H */
