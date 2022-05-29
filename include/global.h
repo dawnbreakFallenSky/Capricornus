@@ -66,7 +66,7 @@
 */
 /* bool型定义 */
 #ifndef bool
-typedef int bool
+typedef int bool;
 #endif
 #ifndef true
 #define true (!0)

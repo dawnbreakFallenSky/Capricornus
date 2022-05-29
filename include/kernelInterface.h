@@ -145,7 +145,7 @@ typedef struct Status Status;
 /* <类描述> */
 /* 1)状态接口 */
 /* 2) */
-typedef struct SStatus
+struct Status
 {
     /* 设置状态值 */
     Status* (*setStatusValue)(void* thiz, int value);

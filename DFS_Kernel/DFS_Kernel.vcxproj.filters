@@ -27,5 +27,13 @@
     <ClCompile Include="APP\processor.c">
       <Filter>源文件\APP</Filter>
     </ClCompile>
+    <ClCompile Include="APP\clock.c">
+      <Filter>源文件\APP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="APP\clock.h">
+      <Filter>头文件\APP</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
