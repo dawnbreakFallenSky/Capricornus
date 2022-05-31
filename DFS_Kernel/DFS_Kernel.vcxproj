@@ -131,11 +131,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="APP\clock.c" />
+    <ClCompile Include="APP\lockfreeQueue.c" />
     <ClCompile Include="APP\main.c" />
     <ClCompile Include="APP\processor.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="APP\clock.h" />
+    <ClInclude Include="APP\lockfreeQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
