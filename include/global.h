@@ -119,8 +119,8 @@ typedef double              F64;
 #define UNUSED(x)           (void)x                                                 /* 消除未使用变量引起的警告 */
 #define PASS                                                                        /* 无操作 */
 #define LOOP(x, len)        (x >= len ? (x - len) : x)                              /* 游标循环操作 */
-#define FREE_OBJECT(x)      if (NULL != x) {free x; x = NULL;} else {PASS;}       /* 释放对象内存 */
-#define FREE_ARRAY(x)       if (NULL != x) {free x; x = NULL;} else {PASS;}     /* 释放对象内存 */
+#define FREE_OBJECT(x)      if (NULL != x) {free(x); x = NULL;} else {PASS;}       /* 释放对象内存 */
+#define FREE_ARRAY(x)       if (NULL != x) {free(x); x = NULL;} else {PASS;}     /* 释放对象内存 */
 
 /* 大小端转换 */
 /* Swap 2 byte, 16 bit values */
