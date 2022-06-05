@@ -27,6 +27,8 @@
 **                                         Include
 **-----------------------------------------------------------------------------------------
 */
+#include <malloc.h>
+#include <stdio.h>
 #include "global.h"
 #ifdef WINDOWS
 #define NOMINMAX                    /* 禁用VC++中的min/max宏定义 */

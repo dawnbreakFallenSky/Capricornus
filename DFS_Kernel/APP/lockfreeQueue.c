@@ -78,7 +78,7 @@ LockfreeQueue* CreateLockfreeQueue(unsigned int len, unsigned int itemSize)
 	LockfreeQueue* lockfreeQueue = (LockfreeQueue*)malloc(sizeof(LockfreeQueue));
 
     if (NULL == lockfreeQueue) {
-        printf("Clock::Clock()--create clock error.\n");
+        printf("LockfreeQueue::LockfreeQueue()--create lockfreeQueue error.\n");
     }
     else
     {
@@ -111,6 +111,8 @@ LockfreeQueue* CreateLockfreeQueue(unsigned int len, unsigned int itemSize)
         lockfreeQueue->count = count;
         lockfreeQueue->capacity = capacity;
     }
+
+    return lockfreeQueue;
 }
 /* END of CreateLockfreeQueue */
 

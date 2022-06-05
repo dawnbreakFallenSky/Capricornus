@@ -74,7 +74,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -132,12 +132,14 @@
   <ItemGroup>
     <ClCompile Include="APP\clock.c" />
     <ClCompile Include="APP\lockfreeQueue.c" />
+    <ClCompile Include="APP\logger.c" />
     <ClCompile Include="APP\main.c" />
     <ClCompile Include="APP\processor.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="APP\clock.h" />
     <ClInclude Include="APP\lockfreeQueue.h" />
+    <ClInclude Include="APP\logger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

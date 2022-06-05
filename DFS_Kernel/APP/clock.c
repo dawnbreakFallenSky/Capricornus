@@ -117,8 +117,8 @@ static Clock* CreateClock(void)
 
         clock->_appTime = 0;
         clock->_utcTimeBegin = time((time_t*)nullptr);
-        struct tm* localTime = localtime((time_t*)&clock->_utcTimeBegin);
-        int year = 1900 + localTime->tm_year;
+        localTime = localtime((time_t*)&clock->_utcTimeBegin);
+        year = 1900 + localTime->tm_year;
         if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
             _days[1] = 29;
         }

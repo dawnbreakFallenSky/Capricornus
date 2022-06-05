@@ -31,7 +31,6 @@
 #include "lockfreeQueue.h"
 #include "../LIB/CSTLib/cMutex.h"
 #include "../LIB/CSTLib/cCVariable.h"
-#include "../LIB/CSTLib/cThread.h"
 
 /*-----------------------------------------------------------------------------------------
 **                                     Macro Definition
