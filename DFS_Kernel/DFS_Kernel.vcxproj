@@ -131,6 +131,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="APP\clock.c" />
+    <ClCompile Include="APP\dfsStatus.c" />
     <ClCompile Include="APP\lockfreeQueue.c" />
     <ClCompile Include="APP\logger.c" />
     <ClCompile Include="APP\main.c" />
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="APP\clock.h" />
+    <ClInclude Include="APP\dfsStatus.h" />
     <ClInclude Include="APP\lockfreeQueue.h" />
     <ClInclude Include="APP\logger.h" />
   </ItemGroup>

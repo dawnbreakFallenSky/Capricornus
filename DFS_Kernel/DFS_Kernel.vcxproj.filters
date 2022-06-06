@@ -36,6 +36,9 @@
     <ClCompile Include="APP\logger.c">
       <Filter>源文件\APP</Filter>
     </ClCompile>
+    <ClCompile Include="APP\dfsStatus.c">
+      <Filter>源文件\APP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="APP\clock.h">
@@ -45,6 +48,9 @@
       <Filter>头文件\APP</Filter>
     </ClInclude>
     <ClInclude Include="APP\logger.h">
+      <Filter>头文件\APP</Filter>
+    </ClInclude>
+    <ClInclude Include="APP\dfsStatus.h">
       <Filter>头文件\APP</Filter>
     </ClInclude>
   </ItemGroup>
