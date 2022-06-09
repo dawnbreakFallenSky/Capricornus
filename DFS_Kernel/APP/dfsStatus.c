@@ -43,7 +43,7 @@ static int getStatusValue(void* thiz);
 */
 /*.BH--------------------------------------------------------------------------------------
 **
-** 函数名(Function Name): DfsStatus
+** 函数名(Function Name): CreateDfsStatus
 **
 ** 描述(Description): 本函数为DfsStatus类构造函数
 **
@@ -72,8 +72,10 @@ DfsStatus* CreateDfsStatus(int initValue)
     else
     {
         dfsStatus->_status = (Status*)malloc(sizeof(Status));
+        if (NULL == dfsStatus->_status) {
+            return NULL;
+        }
 
-        initValue = STATUS_INVALID;
         dfsStatus->_value = initValue;
         /* 成员初始化 */
         dfsStatus->_mtx = *CreateCMutex();

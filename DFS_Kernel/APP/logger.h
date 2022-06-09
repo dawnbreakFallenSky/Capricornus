@@ -55,7 +55,7 @@ typedef struct _SLogInfo
 **                                     Macro Definition
 **-----------------------------------------------------------------------------------------
 */
-#define KERNELLOGF(...)     {char errStr[LOG_INFO_SIZE] = {0}; sprintf(errStr, __VA_ARGS__); _logger->log(errStr);}
+#define KERNELLOGF(...)     {char errStr[LOG_INFO_SIZE] = {0}; sprintf(errStr, __VA_ARGS__); _logger->log(_logger, errStr);}
 
 /*-----------------------------------------------------------------------------------------
 **                                     Class Definition
